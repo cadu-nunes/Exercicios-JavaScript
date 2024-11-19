@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo JavaScript</title>
+</head>
+<body>
+    <h1>Bem-vindo ao JavaScript!</h1>
+
+    <!-- Aqui é o espaço do JavaScript -->
+    <script>
+        // 1. Bem-vindo ao Sistema
+        let nome = prompt("Por favor, digite seu nome:");
+        // Exibindo uma mensagem personalizada
+        alert(`Olá, ${nome}! Seja bem-vindo!`);
+        console.log("O usuário digitou o nome:", nome);
+
+        // 2. Calculadora Simples
+        let numero1 = prompt("Digite o primeiro número:");
+        let numero2 = prompt("Digite o segundo número:");
+        let soma = Number(numero1) + Number(numero2);
+        alert(`A soma dos números é: ${soma}`);
+
+        // 3. Descubra sua Idade
+        // Pergunta o ano atual e o ano de nascimento do usuário, calcula a idade e exibe o resultado.
+        let anoAtual = prompt("Digite o ano atual:");
+        let anoNascimento = prompt("Digite o ano em que você nasceu:");
+        let idade = Number(anoAtual) - Number(anoNascimento);
+        alert(`Você tem ${idade} anos.`);
+
+        // 4. Loja de Sorvetes
+        // Pergunta a quantidade de sorvetes e o preço unitário, calcula o total e mostra o valor.
+        let quantidade = prompt("Quantos sorvetes você quer comprar?");
+        let preco = prompt("Qual é o preço de cada sorvete?");
+        let total = Number(quantidade) * Number(preco);
+        alert(`O total da compra é: R$${total.toFixed(2)}`);
+
+        // 5. Jogo de Adivinhação
+        // Define um número secreto fixo
+        let numeroSecreto = Math.floor(Math.random() * 10) + 1; //Gera um número aléatório entre 1 e 10.
+        // Pergunta ao usuário um número
+        let chuteUsuario = prompt("Tente adivinhar o número secreto (entre 1 e 10):");
+        // Mostra o número secreto e o chute do usuário
+        alert(`Você chutou: ${chuteUsuario}. O número secreto era: ${numeroSecreto}.`);
+
+         // 6. Exibição de Números
+        // Pede dois números ao usuário e os exibe
+        let numeroA = prompt("Digite um número:");
+        let numeroB = prompt("Digite outro número:");
+        // Exibe os números fornecidos pelo usuário
+        alert(`Você digitou os números: ${numeroA} e ${numeroB}.`);
+
+        // 7. Conta de Restaurante
+        // Pede ao usuário o valor da conta e a porcentagem de gorjeta desejada
+        let valorConta = prompt("Digite o valor da conta (em R$):");
+        let porcentagemGorjeta = prompt("Digite a porcentagem de gorjeta que deseja dar:");
+        // Calcula o valor da gorjeta e o total da conta
+        let valorGorjeta = (Number(valorConta) * Number(porcentagemGorjeta)) / 100;
+        let totalConta = Number(valorConta) + valorGorjeta;
+        // Exibe os valores calculados
+        alert(`Valor da conta: R$${Number(valorConta).toFixed(2)}\nGorjeta (${porcentagemGorjeta}%): R$${valorGorjeta.toFixed(2)}\nTotal a pagar: R$${totalConta.toFixed(2)}`);
+        //alert(`Valor da gorjeta é R$${valorGorgeta.toFixed(2)}. Total a pagar é R$${totalConta.toFixed(2)}`);
+
+        // 8. Hora da Multiplicação
+        // Pede dois números ao usuário para multiplicar
+        let numeroMultiplicacao1 = prompt("Digite um número para multiplicação:");
+        let numeroMultiplicacao2 = prompt("Digite outro número para multiplicação:");
+        // Calcula a multiplicação dos dois números
+        let resultadoMultiplicacao = Number(numeroMultiplicacao1) * Number(numeroMultiplicacao2);
+        // Exibe o resultado no console
+        console.log(`O resultado da multiplicação entre ${numeroMultiplicacao1} e ${numeroMultiplicacao2} é: ${resultadoMultiplicacao}`);
+        
+        // 9. Previsão do Futuro
+        // Pede ao usuário seu nome, ano atual e quantos anos ele quer adicionar
+        let nomeUsuarioFuturo = prompt("Qual é o seu nome?");
+        let anoAtualFuturo = prompt("Qual é o ano atual?");
+        let anosAdicionar = prompt("Quantos anos você quer adicionar?");
+        // Calcula o ano futuro somando os anos fornecidos ao ano atual
+        let anoFuturo = Number(anoAtualFuturo) + Number(anosAdicionar);
+        // Exibe a previsão do futuro com base nos dados fornecidos pelo usuário
+        alert(`Olá, ${nomeUsuarioFuturo}, daqui a ${anosAdicionar} anos estaremos no ano de ${anoFuturo}.`);
+
+        // 10. Exibição de Nota
+        // Pede ao usuário uma nota e exibe na tela.
+        let notaUsuario = prompt("Digite uma nota:");
+        // Exibe a nota fornecida pelo usuário.
+        alert(`Você digitou a nota: ${notaUsuario}.`);
+
+        //DESAFIO: Planejador de Compras
+
+        let nomeProduto = prompt("Digite o nome do produto:");
+        let quantidade = prompt("Digite a quantidade desejada:");
+        let precoUnitario = prompt("Digite o preço unitário do produto:");
+        let totalCompra = Number(quantidade) * Number(precoUnitario);
+        alert(`Você comprou ${quantidade} unidades de ${nomeProduto} por R$${precoUnitario.toFixed(2)} cada, totalizando R$ ${totalCompra.toFixed(2)}.`);
+
+
+        //DESAFIO FINAL: Cálculadora de Média Simples
+        
+        let nomeDisciplina = prompt("Digite o nome da disciplina:");
+        let notaProva1 = prompt("Digite a nota da prova 1:");
+        let notaProva2 = prompt("Digite a nota da prova 2:");
+        let notaProva3 = prompt("Digite a nota da prova 3:");
+        
+        let media = (Number(notaProva1) + Number(notaProva2) +Number(notaProva3)) / 3;
+
+        alert(`Na disciplina Matemática, você obteve as notas: ${notaProva1}, ${notaProva2}, ${notaProva3}. Sua ,édia final é: ${media}.`)
+
+
+
+    </script>
+</body>
+</html>
